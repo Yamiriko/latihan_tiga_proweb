@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latihan 3 Permograman We</title>
+<script src="jquery-3.6.1.min.js"></script>
+</head>
+<body>
+<noscript>Javascript Belum Diaktifkan</noscript>
+<h1>Latihan 3 Permograman Web</h1>
+<p>Dibawah ini akan dilakukan pemrograman javascript</p>
+<form id="form_input">
+  <p>
+    <label for="awal">Awal</label>
+    <input type="number" min="0" max="99" id="awal" value="0" required />
+  </p>
+  <p>
+    <label for="akhir">Akhir</label>
+    <input type="number" min="0" max="99" id="akhir" value="0" required />
+  </p>
+  <p>
+    <label for="akhir">Hasilnya</label>
+    <br>
+    <span id="hasil">()</span>
+  </p>
+  <p>
+    <button id="btn_proses" type="button" onclick="proses();">Proses</button>
+  </p>
+</form>
+
+<script>
+function proses() {
+  let awal = $('#awal').val();
+  let akhir = $('#akhir').val();
+  let konten = '';
+  for (let index = awal; index < akhir; index++) {
+    // konten+='<option vale="'+index+'">'+index+'</option>';
+    konten+=index + '<br>';
+    
+  }
+  console.log(konten);
+  $('#hasil').html(konten);  
+}
+</script>
+</body>
+</html>
